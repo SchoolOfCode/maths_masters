@@ -1,43 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 
-/* * {
+* {
   margin: 20;
   padding: 20;
   box-sizing: border-box;
-} */
+}
 
 body {
   background-image: url("Images/631.jpg");
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200%;
 }
 
 h1 {
-  color: rgb(54, 163, 10);
-  text-align: center;
-  font-family: Asap, sans-serif;
-}
-
-.wrapper {
-  text-align: center;
-}
-.equation {
-  margin: 50px auto;
-  border: 10px solid white;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
   color: white;
-  font-size: 46px;
-  padding: 20px 20px;
+  text-align: center;
+
   font-family: Asap, sans-serif;
-  position: relative;
 }
 
 .result {
-  font-size: 30px;
+  font-size: 20px;
   color: white;
 }
 
@@ -47,22 +30,7 @@ h1 {
   font-family: Asap, sans-serif;
 }
 
-.choices {
-  margin-top: 50px;
+.button {
   text-align: center;
-}
-.choice {
-  border: 15px solid white;
-  border-radius: 50%;
-  margin: 0 20px;
-  padding: 10px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  width: 100px;
-  height: 100px;
-}
-
-.choice:hover {
-  cursor: pointer;
-  background: white;
+  font-family: Asap, sans-serif;
 }
