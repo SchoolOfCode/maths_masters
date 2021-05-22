@@ -7,31 +7,33 @@ const TOKEN = "60a8e2c18f40bb64ec94690b";
 const PRIVATE = "3XrM-f9kdUeAuuv95QrE8Aal7MEJy5UUGMfgoBYZMR4A";
 
 async function addPlayer() {
-    displayScore.innerHTML = "";
+  displayScore.innerHTML = "";
   const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/1000/`;
   await fetch(addURL);
-  keepScore();
+  await updateResults();
 }
 
-async function keepScore() {
+async function updateResults() {
   const URL = `http://dreamlo.com/lb/${TOKEN}/json`;
   const response = await fetch(URL);
   const data = await response.json();
+  results = data.dreamlo.leaderboard.entry;
   console.log(data);
   showLeaderboard();
+}
 
- function showLeaderboard() {
-    for (let i = 0; i < 10; i++) {
-      results = data.dreamlo.leaderboard.entry[i];
-      displayScore.innerHTML += `
+function showLeaderboard() {
+  displayScore.innerHTML = `<h2>Leaderboard</h2>`
+  for (let i = 0; i < results.length; i++) {
+    displayScore.innerHTML += `
         <table>
         <tr>
-        <td>${results.name}</td>
-        <td>${results.score}</td>
-        <td>${results.date}</td>
+        <td>${results[i].name}</td>
+        <td>${results[i].score}</td>
+        <td>${results[i].date}</td>
         </tr>
         </table>
         `;
-    }
   }
 }
+
