@@ -1,37 +1,12 @@
 ### PAGE 4
 
-## HTML
+## DONE
 
-- Fonts, icon, meta info
+- Game will select random numbers and run one game
 
-- Player Stats section
+## STILL TO DO
 
-  - Player avatar icon
-  - Player name
-  - Player score value
-
-- Gameplay section
-
-  - number 1 value
-  - operation value
-  - number 2 value
-  - =?
-
-- Time left counter
-
-## CSS
-
-- player stats section - full width of sreen (flex container)
-
-  - player info container (left align)
-    -player avatar
-    -player name
-  - player score (right align)
-
-- gameplay section (flex container)
-
-  - question items
-  - multiple choice options
-  - center aligned
-
-- time left counter
+- Make the possible answers a bit more random, and no repeats
+- Get new question on click
+- Stop game when timer = 0
+- CSS
