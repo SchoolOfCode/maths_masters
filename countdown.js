@@ -10,7 +10,7 @@ function startCountdown() {
     if (timeRemaining == 0) {
       stopCountdown();
     }
-  }), 1000;
+  }, 1000);
 }
 
 //stop count
