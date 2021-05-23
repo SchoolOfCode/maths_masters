@@ -5,8 +5,8 @@
 //
 
 let playerScore = 0;
-let playerScoreElem = document.querySelector("#player-score");
-playerScoreElem.innerHTML = `Your Score: ${playerScore}`;
+let currentScoreElem = document.querySelector("#current-score");
+
 let number1 = 0;
 let number1Elem = document.querySelector("#number1");
 let operatorArray = ["+", "-", "×", "÷"];
@@ -22,8 +22,6 @@ let button3 = document.querySelector("#option3");
 let button4 = document.querySelector("#option4");
 
 let options = document.querySelectorAll(".options");
-
-gameplay = document.getElementById("gameplay");
 
 setOperator = () => {
   operator = operatorArray[Math.floor(Math.random() * operatorArray.length)];
@@ -89,7 +87,7 @@ updateScore = () => {
     function checkAnswer() {
       if (options[i].innerHTML == answer) {
         playerScore += 10;
-        playerScoreElem.innerHTML = `Your Score: ${playerScore}`;
+        currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
         console.log(playerScore);
         runGame();
       } else {
@@ -100,23 +98,30 @@ updateScore = () => {
   }
 };
 
+//possible improvements for answers
+//option 1 is correct answer.
+//other options are random numbers.
+//randomise order of buttons on the page (elements will need to be created not amended?)
+
 runGame();
 updateScore();
+
+finalScore = () => {
+  let scoreElem = document.querySelector("#player-score");
+  scoreElem.innerHTML = `You scored ${playerScore} points!`;
+};
 //30 second timer
+currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
 let timeLeft = 30;
 let timerElem = document.getElementById("timer");
 let timer = setInterval(countdown, 1000);
 function countdown() {
   if (timeLeft == -1) {
     clearTimeout(timer);
-    window.location.href = "";
+    sessionStorage.setItem("final score", playerScore);
+    window.location.href = "score.html";
   } else {
     timerElem.innerHTML = timeLeft + " seconds left";
     timeLeft--;
   }
 }
-
-//possible improvements for answers
-//option 1 is correct answer.
-//other options are random numbers.
-//randomise order of buttons on the page (elements will need to be created not amended?)
