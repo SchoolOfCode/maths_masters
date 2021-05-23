@@ -1,16 +1,94 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/8a7df27cab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="text" id="addUsername">
-    <button onclick="addPlayer()">Enter</button>
-    <div class="displayScore"></div>
-    <script src="leaderboard.js"></script> 
-</body>
+  </head>
+
+  <body>
+    <!-- first - start game-->
+    <div class="startGame box">
+      <div class="mainDiv">
+        <button onclick="startGameFunction()">Start Game</button>
+      </div>
+    </div>
+
+    <!-- second - game -->
+    <div class="gameContainer box">
+      <div class="mainDiv">
+      <p>Game here</p>
+      </div>
+      
+      <button onclick="gameOverFunction()">Click</button>
+    </div>
+
+    <!-- third - game over -->
+    <div class="gameOver box">
+      <div class="mainDiv">
+        <div id="avatarContainer">
+          <img
+            id="avatarImg"
+            src="https://avatars.dicebear.com/api/jdenticon/hey.svg"
+            alt=""
+          />
+        </div>
+
+        <input
+          type="text"
+          id="addUsername"
+          maxlength="10"
+          onkeyup="getAvatar()"
+        />
+
+        <select onclick="getAvatar()" id="seeds" name="seed">
+          <optgroup label="Select">
+            <option value="human">Human</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="bottts">Bots</option>
+            <option value="avataaars">Avatars</option>
+            <option value="identicon">Identicon</option>
+            <option value="jdenticon">Jdenticon</option>
+            <option value="gridy">Gridy</option>
+            <option value="micah">Micah</option>
+            <option value="initials">Initials</option>
+          </optgroup></select
+        ><br />
+      </div>
+      <button onclick="addPlayer()">Submit</button>
+    </div>
+
+    <!-- show leaderboard -->
+    <div class="displayScore box">
+      <div class="mainDiv">
+        <div class="leaderboardTable"></div>
+      </div>
+      <button onclick="startGameFunction()">Try Again</button>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="avatar.js"></script>
+    <script src="leaderboard.js"></script>
+  </body>
 </html>
