@@ -1,9 +1,3 @@
-//run game func
-//run on load
-//star empty html, then set numbers, operators, answers, choices, update score
-//if answer is correct, add 10 to score then run again, flash "better luck next time" for a short time then run again
-//
-
 let playerScore = 0;
 let currentScoreElem = document.querySelector("#current-score");
 
@@ -22,6 +16,8 @@ let button3 = document.querySelector("#option3");
 let button4 = document.querySelector("#option4");
 
 let options = document.querySelectorAll(".options");
+
+let feedbackElem = document.querySelector("#feedback");
 
 setOperator = () => {
   operator = operatorArray[Math.floor(Math.random() * operatorArray.length)];
@@ -99,11 +95,19 @@ updateScore = () => {
   for (let i = 0; i < options.length; i++) {
     function checkAnswer() {
       if (options[i].innerHTML == answer) {
-        playerScore += 10;
+        playerScore += 25;
         currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
+        feedbackElem.innerHTML = "Correct!";
+        setTimeout(function () {
+          document.getElementById("feedback").innerHTML = "&nbsp";
+        }, 1500);
         console.log(playerScore);
         runGame();
       } else {
+        feedbackElem.innerHTML = "Better luck next time!";
+        setTimeout(function () {
+          document.getElementById("feedback").innerHTML = "&nbsp";
+        }, 1500);
         runGame();
       }
     }

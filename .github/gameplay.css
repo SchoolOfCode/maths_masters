@@ -1,19 +1,1 @@
-/* Can be deleted  */
 
-#stats {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden;
-  background-color: hotpink;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-#player-score {
-  display: flex;
-}
-
-#gameplay {
-  margin-top: 64px;
-}
