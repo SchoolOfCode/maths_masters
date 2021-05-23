@@ -67,10 +67,23 @@ getAnswer = () => {
 };
 
 setOptions = () => {
-  button1.innerHTML = Math.abs(number1 - number2);
-  button2.innerHTML = Math.floor(number1 / number2);
-  button3.innerHTML = number1 * number2;
-  button4.innerHTML = number1 + number2;
+  optionsArray = [];
+  optionsArray.push(Math.abs(number1 - number2));
+  optionsArray.push(Math.floor(number1 / number2));
+  optionsArray.push(number1 * number2);
+  optionsArray.push(number1 + number2);
+  console.log(optionsArray);
+  function hasDuplicates(optionsArray) {
+    return new Set(optionsArray).size !== optionsArray.length;
+  }
+
+  if (hasDuplicates(optionsArray)) {
+    optionsArray.push(Math.floor(Math.random() * 50) + 1);
+  }
+  button1.innerHTML = optionsArray[0];
+  button2.innerHTML = optionsArray[1];
+  button3.innerHTML = optionsArray[2];
+  button4.innerHTML = optionsArray[3];
 };
 
 console.log(answer);
@@ -97,11 +110,6 @@ updateScore = () => {
     options[i].addEventListener("click", checkAnswer);
   }
 };
-
-//possible improvements for answers
-//option 1 is correct answer.
-//other options are random numbers.
-//randomise order of buttons on the page (elements will need to be created not amended?)
 
 runGame();
 updateScore();
