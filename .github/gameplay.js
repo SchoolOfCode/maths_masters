@@ -109,8 +109,7 @@ let timer = setInterval(countdown, 1000);
 function countdown() {
   if (timeLeft == -1) {
     clearTimeout(timer);
-    timerElem.innerHTML = "Time's up!";
-    //move to next page
+    window.location.href = "";
   } else {
     timerElem.innerHTML = timeLeft + " seconds left";
     timeLeft--;
