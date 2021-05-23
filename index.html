@@ -37,16 +37,34 @@
     <!-- second - game -->
     <div class="gameContainer box">
       <div class="mainDiv">
-      <p>Game here</p>
+        <section id="stats">
+          <p id="current-score"></p>
+        </section>
+        <section id="gameplay">
+          <p id="number1">number 1</p>
+          <p id="operation">operation</p>
+          <p id="number2">number 2</p>
+          <p>= ?</p>
+        </section>
+        <section id="buttonsOptions">
+          <button class="options" id="option1">option1</button>
+          <button class="options" id="option2">option2</button>
+          <button class="options" id="option3">option3</button>
+          <button class="options" id="option4">option4</button>
+          <p id="feedback"></p>
+        </section>
+        <section id="timer"></section>
       </div>
-      
+
       <button onclick="gameOverFunction()">Click</button>
     </div>
 
     <!-- third - game over -->
     <div class="gameOver box">
       <div class="mainDiv">
-        <div id="avatarContainer">
+          <section id="youScored"></section>
+        
+          <div id="avatarContainer">
           <img
             id="avatarImg"
             src="https://avatars.dicebear.com/api/jdenticon/hey.svg"
@@ -73,8 +91,7 @@
             <option value="gridy">Gridy</option>
             <option value="micah">Micah</option>
             <option value="initials">Initials</option>
-          </optgroup></select
-        ><br />
+          </optgroup></select>
       </div>
       <button onclick="addPlayer()">Submit</button>
     </div>
@@ -88,6 +105,7 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="gameplay.js"></script>
     <script src="avatar.js"></script>
     <script src="leaderboard.js"></script>
   </body>

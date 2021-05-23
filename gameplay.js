@@ -1,12 +1,17 @@
+function startGameFunction() {
+  startGame.style.display = "none";
+  gameContainer.style.display = "inherit";
+  displayScore.style.display = "none";
+
 let playerScore = 0;
 let currentScoreElem = document.querySelector("#current-score");
 
-let number1 = 0;
+let number1 = null;
 let number1Elem = document.querySelector("#number1");
 let operatorArray = ["+", "-", "×", "÷"];
 let operator = "";
 let operatorElem = document.querySelector("#operation");
-let number2 = 0;
+let number2 = null;
 let number2Elem = document.querySelector("#number2");
 let answer = "";
 
@@ -24,6 +29,7 @@ setOperator = () => {
   operatorElem.innerHTML = operator;
   console.log(operator);
 };
+
 setNumbers = () => {
   number1 = Math.floor(Math.random() * 12) + 1;
   number2 = Math.floor(Math.random() * 12) + 1;
@@ -131,9 +137,10 @@ function countdown() {
   if (timeLeft == -1) {
     clearTimeout(timer);
     sessionStorage.setItem("final score", playerScore);
-    window.location.href = "score.html";
+    gameOverFunction();
   } else {
     timerElem.innerHTML = timeLeft + " seconds left";
     timeLeft--;
   }
+}
 }

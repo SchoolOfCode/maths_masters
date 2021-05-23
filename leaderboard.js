@@ -10,7 +10,8 @@ async function addPlayer() {
   gameOver.style.display = "none";
   displayScore.style.display = "inherit";
   leaderboardTable.innerHTML = "";
-  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/2200/`;
+  playerScore = sessionStorage.getItem("final score");
+  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/`;
   await fetch(addURL);
   await updateResults();
 }
@@ -32,7 +33,6 @@ function showLeaderboard() {
         <tr>
         <td id="results-name">${results[i].name}</td>
         <td id="results-score">${results[i].score}</td>
-
         </tr>
         </table>
         `;

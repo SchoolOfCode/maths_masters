@@ -2,6 +2,7 @@ const startGame = document.querySelector(".startGame");
 const gameContainer = document.querySelector(".gameContainer");
 const gameOver = document.querySelector(".gameOver");
 const displayScore = document.querySelector(".displayScore");
+const youScored = document.querySelector("#youScored");
 
 function hidePages() {
   gameContainer.style.display = "none";
@@ -10,17 +11,9 @@ function hidePages() {
 }
 hidePages();
 
-function startGameFunction() {
-  startGame.style.display = "none";
-  gameContainer.style.display = "inherit";
-  displayScore.style.display = "none";
-}
-
 function gameOverFunction() {
+  playerScore = sessionStorage.getItem("final score");
   gameContainer.style.display = "none";
   gameOver.style.display = "inherit";
-}
-
-function resetGame() {
-
+  youScored.innerHTML = `You scored ${playerScore} points!`;
 }

@@ -13,38 +13,6 @@ body {
   align-content: baseline;
 }
 
-/* avatar */
-
-#avatarContainer {
-  text-align: center;
-}
-
-#avatarImg {
-  width: 70px;
-  border: lightcoral 5px solid;
-  border-radius: 50%;
-  background-color: whitesmoke;
-  margin-right: 15px;
-}
-
-/* leaderboard table */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 500px;
-  background-color: whitesmoke;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-  width: 150px;
-  text-transform: capitalize;
-}
-
 .box {
   display: flex;
   flex-direction: column;
@@ -79,9 +47,34 @@ button {
   height: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: lavender;
+}
+
+
+
+/* gameplay */
+
+#gameplay {
+width: 100%;
+}
+
+.options {
+  width: 60px;
+  height: 60px;
+}
+
+#timer {
+  width: 100%;
+}
+
+/* gameover */
+
+#youScored {
+  width: 100%;
+  margin-bottom: -300px;
 }
 
 select {
@@ -101,4 +94,36 @@ input {
 input:focus, textarea:focus, select:focus{
   outline: none;
   border: none;
+}
+
+/* avatar */
+
+#avatarContainer {
+  text-align: center;
+}
+
+#avatarImg {
+  width: 70px;
+  border: lightcoral 5px solid;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  margin-right: 15px;
+}
+
+/* leaderboard table */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+  background-color: whitesmoke;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 150px;
+  text-transform: capitalize;
 }

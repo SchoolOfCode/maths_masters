@@ -22,4 +22,5 @@ function displayAvatar(options) {
   avatarContainer.innerHTML = `
 <img id="avatarImg" src='${avatarImage}' alt="avatar">
 `;
+sessionStorage.setItem("avatar", avatarImage);
 }
