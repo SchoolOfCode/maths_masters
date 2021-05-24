@@ -15,5 +15,5 @@ function gameOverFunction() {
   playerScore = sessionStorage.getItem("final score");
   gameContainer.style.display = "none";
   gameOver.style.display = "inherit";
-  youScored.innerHTML = `You scored ${playerScore} points!`;
+  youScored.innerHTML = `<p>You scored <br><span>${playerScore}</span> points!</p>`;
 }

@@ -28,14 +28,14 @@ async function updateResults() {
 }
 
 function showLeaderboard(results) {
-  leaderboardTable.innerHTML = `<h2>Leaderboard</h2>`;
+  leaderboardTable.innerHTML = `<h2 class="heading">Leaderboard</h2>`;
   for (let i = 0; i < 10; i++) {
     leaderboardTable.innerHTML += `
         <table>
         <tr>
-        <td><img id="results-avatar" src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
-        <td id="results-name">${results[i].name}</td>
-        <td id="results-score">${results[i].score}</td>
+        <td id="table-avatar"><img id="results-avatar" src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
+        <td id="table-name">${results[i].name}</td>
+        <td id="table-score">${results[i].score}</td>
         </tr>
         </table>
         `;
