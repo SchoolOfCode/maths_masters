@@ -1,5 +1,5 @@
 const enterButton = document.querySelector("#enterButton");
-const leaderboardTable = document.querySelector(".leaderboardTable")
+const leaderboardTable = document.querySelector(".leaderboardTable");
 
 let results = "";
 
@@ -11,10 +11,12 @@ async function addPlayer() {
   displayScore.style.display = "inherit";
   leaderboardTable.innerHTML = "";
   playerScore = sessionStorage.getItem("final score");
-  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/`;
+  saveAvatar = sessionStorage.getItem("avatar");
+  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${saveAvatar}`;
   await fetch(addURL);
   await updateResults();
 }
+// http://dreamlo.com/lb/3XrM-f9kdUeAuuv95QrE8Aal7MEJy5UUGMfgoBYZMR4A/add/Carmine/1000/90/Awesome
 
 async function updateResults() {
   const URL = `http://dreamlo.com/lb/${TOKEN}/json`;
@@ -22,15 +24,16 @@ async function updateResults() {
   const data = await response.json();
   results = data.dreamlo.leaderboard.entry;
   console.log(data);
-  showLeaderboard();
+  showLeaderboard(results);
 }
 
-function showLeaderboard() {
+function showLeaderboard(results) {
   leaderboardTable.innerHTML = `<h2>Leaderboard</h2>`;
   for (let i = 0; i < 10; i++) {
     leaderboardTable.innerHTML += `
         <table>
         <tr>
+        <td id="results-avatar"><img src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         <td id="results-name">${results[i].name}</td>
         <td id="results-score">${results[i].score}</td>
         </tr>

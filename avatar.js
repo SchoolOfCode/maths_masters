@@ -20,7 +20,8 @@ function getAvatar() {
 function displayAvatar(options) {
   const avatarImage = `https://avatars.dicebear.com/api/${options.value}/${inputUsername.value}.svg`;
   avatarContainer.innerHTML = `
-<img id="avatarImg" src='${avatarImage}' alt="avatar">
-`;
-sessionStorage.setItem("avatar", avatarImage);
+  <img id="avatarImg" src='${avatarImage}' alt="avatar">
+  `;
+const saveAvatar = options.value;
+sessionStorage.setItem("avatar", saveAvatar);
 }
