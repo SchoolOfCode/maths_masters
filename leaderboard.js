@@ -33,9 +33,9 @@ function showLeaderboard(results) {
     leaderboardTable.innerHTML += `
         <table>
         <tr>
+        <td><img id="results-avatar" src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         <td id="results-name">${results[i].name}</td>
         <td id="results-score">${results[i].score}</td>
-        <td id="results-avatar"><img src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         </tr>
         </table>
         `;
