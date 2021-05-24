@@ -23,6 +23,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <title>Document</title>
   </head>
 
@@ -62,9 +66,9 @@
     <!-- third - game over -->
     <div class="gameOver box">
       <div class="mainDiv">
-          <section id="youScored"></section>
-        
-          <div id="avatarContainer">
+        <section id="youScored"></section>
+
+        <div id="avatarContainer">
           <img
             id="avatarImg"
             src="https://avatars.dicebear.com/api/jdenticon/hey.svg"
@@ -91,7 +95,8 @@
             <option value="gridy">Gridy</option>
             <option value="micah">Micah</option>
             <option value="initials">Initials</option>
-          </optgroup></select>
+          </optgroup>
+        </select>
       </div>
       <button onclick="addPlayer()">Submit</button>
     </div>
