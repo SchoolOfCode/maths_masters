@@ -7,6 +7,7 @@ function getAvatar() {
     var options;
     for (var i = 0; i < seeds.options.length; i++) {
       options = seeds.options[i];
+      
       if (options.selected === true) {
         break;
       }
@@ -22,6 +23,6 @@ function displayAvatar(options) {
   avatarContainer.innerHTML = `
   <img id="avatarImg" src='${avatarImage}' alt="avatar">
   `;
-const saveAvatar = options.value;
-sessionStorage.setItem("avatar", saveAvatar);
+  const option = options.value;
+  sessionStorage.setItem("options", option);
 }

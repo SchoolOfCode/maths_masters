@@ -11,8 +11,8 @@ async function addPlayer() {
   displayScore.style.display = "inherit";
   leaderboardTable.innerHTML = "";
   playerScore = sessionStorage.getItem("final score");
-  saveAvatar = sessionStorage.getItem("avatar");
-  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${saveAvatar}`;
+  options = sessionStorage.getItem("options");
+  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${options}`;
   await fetch(addURL);
   await updateResults();
 }
@@ -33,9 +33,9 @@ function showLeaderboard(results) {
     leaderboardTable.innerHTML += `
         <table>
         <tr>
-        <td id="results-avatar"><img src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         <td id="results-name">${results[i].name}</td>
         <td id="results-score">${results[i].score}</td>
+        <td id="results-avatar"><img src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         </tr>
         </table>
         `;

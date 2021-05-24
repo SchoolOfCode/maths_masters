@@ -130,7 +130,7 @@ finalScore = () => {
 };
 //30 second timer
 currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
-let timeLeft = 30;
+let timeLeft = 5;
 let timerElem = document.getElementById("timer");
 let timer = setInterval(countdown, 1000);
 function countdown() {
