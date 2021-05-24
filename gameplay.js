@@ -131,8 +131,9 @@ function startGameFunction() {
     }
   };
 
-  runGame();
-  updateScore();
+runGame();
+updateScore();
+
 
   finalScore = () => {
     let scoreElem = document.querySelector("#player-score");
