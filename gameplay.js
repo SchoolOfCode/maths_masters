@@ -136,7 +136,7 @@ updateScore();
 
   //30 second timer
   currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
-  let timeLeft = 30;
+  let timeLeft = 3;
   let timerElem = document.getElementById("timer");
   let timer = setInterval(countdown, 1000);
   function countdown() {
