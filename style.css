@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root {
   --background-color: whitesmoke;
@@ -14,6 +16,8 @@
 
   --title-font: "Bangers";
   --text-font: "Poppins";
+  --numbers-font: "Russo One";
+  --heading-font: "Righteous";
 }
 
 * {
@@ -76,7 +80,7 @@ button {
   width: 100%;
   font-family: var(--title-font);
   color: var(--text-color);
-  text-shadow: -2px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
+  text-shadow: -4px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
   font-size: 7em;
   letter-spacing: 5px;
 }
@@ -84,7 +88,7 @@ button {
 /* gameplay */
 .mainDiv {
   background-image: url("https://github.com/SchoolOfCode/maths_masters/blob/main/img/bg.png?raw=true");
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 #current-score,
@@ -123,7 +127,7 @@ button:hover {
 #number1,
 #number2 {
   font-size: 4rem;
-  font-family: var(--title-font);
+  font-family: var(--numbers-font);
   color: var(--text-color);
   font-weight: bolder;
   margin: 0px;
@@ -153,6 +157,7 @@ button:hover {
 
 span {
   color: var(--accent2);
+  font-family: var(--numbers-font);
   font-size: 4rem;
   text-shadow: -2px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
@@ -208,10 +213,10 @@ select:focus {
 .heading {
   color: var(--text-color);
   font-size: 3em;
-  font-family: var(--title-font);
-  letter-spacing: 2px;
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
   margin-bottom: 6px;
-  text-shadow: -2px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
+  text-shadow: -3px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
 
 table {
