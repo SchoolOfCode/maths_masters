@@ -12,14 +12,14 @@ async function addPlayer() {
   leaderboardTable.innerHTML = "";
   playerScore = sessionStorage.getItem("final score");
   options = sessionStorage.getItem("options");
-  const addURL = `https://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${options}`;
+  const addURL = `https://www.dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${options}`;
   await fetch(addURL);
   await updateResults();
 }
 // http://dreamlo.com/lb/3XrM-f9kdUeAuuv95QrE8Aal7MEJy5UUGMfgoBYZMR4A/add/Carmine/1000/90/Awesome
 
 async function updateResults() {
-  const URL = `http://dreamlo.com/lb/${TOKEN}/json`;
+  const URL = `https://www.dreamlo.com/lb/${TOKEN}/json`;
   const response = await fetch(URL);
   const data = await response.json();
   results = data.dreamlo.leaderboard.entry;
