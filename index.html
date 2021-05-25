@@ -62,12 +62,12 @@
         </div>
 
         <div class="addScoreUsername">
-          <label>Enter your username</label>
           <input
             type="text"
             id="addUsername"
             maxlength="10"
             onkeyup="getAvatar()"
+            placeholder="Enter your username"
           />
 
           <select onclick="getAvatar()" id="seeds" name="seed">
@@ -84,7 +84,7 @@
               <option value="initials">Initials</option>
             </optgroup>
           </select>
-          
+
           <button id="submitNameButton" onclick="addPlayer()">
             <i class="fas fa-share"></i>
           </button>

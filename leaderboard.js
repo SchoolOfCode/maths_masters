@@ -12,7 +12,7 @@ async function addPlayer() {
   leaderboardTable.innerHTML = "";
   playerScore = sessionStorage.getItem("final score");
   options = sessionStorage.getItem("options");
-  const addURL = `http://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${options}`;
+  const addURL = `https://dreamlo.com/lb/${PRIVATE}/add/${inputUsername.value}/${playerScore}/30/${options}`;
   await fetch(addURL);
   await updateResults();
 }
