@@ -131,8 +131,8 @@ function startGameFunction() {
     }
   };
 
-runGame();
-updateScore();
+  runGame();
+  updateScore();
 
   //30 second timer
   currentScoreElem.innerHTML = `Your Score: ${playerScore}`;

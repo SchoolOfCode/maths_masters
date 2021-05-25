@@ -5,15 +5,15 @@
 }
 
 body {
-    margin: 0;
-    background-color: #023047;
+  margin: 0;
+  background-color: #023047;
 }
 
 .addScoreUsername {
-    margin-top: -16rem;
+  margin-top: -16rem;
 }
 
 #avatarImg {
-    width: 100px;
-    border: 5px solid var(--borders);
+  width: 100px;
+  border: 5px solid var(--borders);
 }

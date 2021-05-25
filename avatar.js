@@ -7,7 +7,7 @@ function getAvatar() {
     var options;
     for (var i = 0; i < seeds.options.length; i++) {
       options = seeds.options[i];
-      
+
       if (options.selected === true) {
         break;
       }

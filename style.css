@@ -7,8 +7,8 @@
   --heading: #023047;
   --accent: #023047;
   --accent2: #fb8500;
-  --accent3: #219EBC;
-  --accent4: #8ECAE6;
+  --accent3: #219ebc;
+  --accent4: #8ecae6;
   --text-color: whitesmoke;
   --borders: #023047;
 
@@ -87,7 +87,8 @@ button {
   background-size: 100%;
 }
 
-#current-score, #timer {
+#current-score,
+#timer {
   background-color: white;
   padding: 6px;
   font-weight: bolder;
