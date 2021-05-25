@@ -33,6 +33,7 @@ function showLeaderboard(results) {
     leaderboardTable.innerHTML += `
         <table>
         <tr>
+        <td id="table-position">${i + 1}°</td>
         <td id="table-avatar"><img id="results-avatar" src="https://avatars.dicebear.com/api/${results[i].text}/${results[i].name}.svg"></td>
         <td id="table-name">${results[i].name}</td>
         <td id="table-score">${results[i].score}</td>

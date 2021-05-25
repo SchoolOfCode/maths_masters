@@ -3,7 +3,7 @@
 
 :root {
   --background-color: whitesmoke;
-  --box-background: #ffd770;
+  --box-background: #fae4ab;
   --heading: #023047;
   --accent: #023047;
   --accent2: #fb8500;
@@ -23,6 +23,7 @@
 body {
   background-color: var(--background-color);
   font-family: var(--text-font);
+  font-weight: bold;
   font-size: 13px;
   margin: 5% auto;
   display: flex;
@@ -75,7 +76,7 @@ button {
   width: 100%;
   font-family: var(--title-font);
   color: var(--text-color);
-  text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  text-shadow: -2px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
   font-size: 7em;
   letter-spacing: 5px;
 }
@@ -125,6 +126,7 @@ button:hover {
   font-weight: bolder;
   margin: 0px;
   width: 33%;
+  text-shadow: -2px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
 
 #operation {
@@ -134,6 +136,7 @@ button:hover {
   width: 33%;
   border-radius: 50%;
   text-align: center;
+  text-shadow: -2px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
 
 /* gameover */
@@ -143,11 +146,13 @@ button:hover {
   font-family: var(--title-font);
   color: var(--text-color);
   font-size: 3rem;
+  text-shadow: -2px 0 #023047, 0 1px #023047, 1px 0 #023047, 0 -1px #023047;
 }
 
 span {
   color: var(--accent2);
   font-size: 4rem;
+  text-shadow: -2px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
 
 .addScoreUsername {
@@ -203,12 +208,12 @@ select:focus {
   font-size: 3em;
   font-family: var(--title-font);
   margin-bottom: 6px;
+  text-shadow: -2px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 500px;
   background-color: var(--box-background);
 }
 
@@ -220,13 +225,18 @@ th {
   text-transform: capitalize;
 }
 
+#table-position {
+  width: 20px;
+  text-align: center;
+}
+
 #table-avatar {
-  width: 60px;
+  width: 80px;
   text-align: center;
 }
 
 #table-name {
-  width: 130px;
+  width: 150px;
 }
 
 #table-score {
@@ -235,7 +245,7 @@ th {
 }
 
 #results-avatar {
-  width: 30px;
+  width: 28px;
 }
 
 #tryAgainButton {
