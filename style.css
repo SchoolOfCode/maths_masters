@@ -221,26 +221,26 @@ td,
 th {
   border-bottom: 1px solid var(--borders);
   text-align: left;
-  padding: 8px;
+  padding: 5px;
   text-transform: capitalize;
 }
 
 #table-position {
-  width: 20px;
+  width: 50px;
   text-align: center;
 }
 
 #table-avatar {
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 
 #table-name {
-  width: 150px;
+  width: 130px;
 }
 
 #table-score {
-  width: 100px;
+  width: 80px;
   text-align: center;
 }
 
