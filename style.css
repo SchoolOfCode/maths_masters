@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 :root {
   --background-color: whitesmoke;
-  --box-background: #FFD770;
-  --heading: #FB8500;
-  --accent: #FB8500;
+  --box-background: #ffd770;
+  --heading: #023047;
+  --accent: #023047;
+  --accent2: #fb8500;
+  --accent3: #219EBC;
   --button-color: whitesmoke;
-  --text-color: #023047;
+  --text-color: whitesmoke;
   --borders: #023047;
 
-  --title-font: 'Bangers';
-  --text-font: 'Poppins'
+  --title-font: "Bangers";
+  --text-font: "Poppins";
 }
 
 * {
@@ -72,16 +74,33 @@ button {
 .title {
   width: 100%;
   font-family: var(--title-font);
-  color: var(--heading);
-  font-size: 3em;
+  color: var(--text-color);
+  font-size: 7em;
   letter-spacing: 5px;
-  text-shadow: 2px 2px 2px #000000;
 }
 
 /* gameplay */
+.mainDiv {
+  background-image: url("/img/bg.png");
+  background-size: 100%;
+}
+
+#current-score, #timer {
+  background-color: white;
+  padding: 6px;
+  font-weight: bolder;
+}
+
+#feedback {
+  color: var(--text-color);
+  font-weight: bolder;
+}
 
 #gameplay {
-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .options {
@@ -89,20 +108,31 @@ width: 100%;
   height: 60px;
 }
 
+button:hover {
+  background-color: var(--accent3);
+}
+
 #timer {
   width: 100%;
 }
 
-#number1, #number2 {
+#number1,
+#number2 {
   font-size: 4rem;
   font-family: var(--title-font);
+  color: var(--text-color);
   font-weight: bolder;
   margin: 0px;
+  width: 33%;
 }
 
 #operation {
   font-size: 5rem;
-  margin: 0px;
+  color: var(--accent2);
+  font-weight: bolder;
+  width: 33%;
+  border-radius: 50%;
+  text-align: center;
 }
 
 /* gameover */
@@ -110,12 +140,13 @@ width: 100%;
 #youScored {
   width: 100%;
   font-family: var(--title-font);
-  color: var(--borders);
-  font-size: 3em;
+  color: var(--text-color);
+  font-size: 3rem;
 }
 
 span {
-  color: var(--accent);
+  color: var(--accent2);
+  font-size: 4rem;
 }
 
 .addScoreUsername {
@@ -142,7 +173,9 @@ input {
   border: 1px solid var(--accent);
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border: none;
 }
@@ -158,14 +191,14 @@ input:focus, textarea:focus, select:focus{
   width: 100px;
   border: 5px solid var(--borders);
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: #8ecae6;
   margin-right: 15px;
 }
 
 /* leaderboard table */
 
 .heading {
-  color: var(--borders);
+  color: var(--text-color);
   font-size: 3em;
   font-family: var(--title-font);
   margin-bottom: 6px;
@@ -192,7 +225,7 @@ th {
 }
 
 #table-name {
-  width:130px;
+  width: 130px;
 }
 
 #table-score {

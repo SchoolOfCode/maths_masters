@@ -134,11 +134,6 @@ function startGameFunction() {
 runGame();
 updateScore();
 
-
-  finalScore = () => {
-    let scoreElem = document.querySelector("#player-score");
-    scoreElem.innerHTML = `You scored ${playerScore} points!`;
-  };
   //30 second timer
   currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
   let timeLeft = 30;
