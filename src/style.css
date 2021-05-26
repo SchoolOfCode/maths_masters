@@ -55,7 +55,7 @@ button {
   font: var(--text-font);
   width: 15vw;
   height: 6vh;
-  background-color: var(--accent3);
+  background-color: var(--accent);
   color: var(--text-color);
   border: 0;
   border-radius: 3px;
@@ -115,7 +115,7 @@ button {
   background-color: white;
   padding: 6px;
   font-weight: bolder;
-  height: 10%;
+  height: 5%;
 }
 
 #feedback {
@@ -133,13 +133,13 @@ button {
 
 #gameplay {
   width: 100%;
-  height: 40%;
+  height: 55%;
   display: flex;
   align-items: center;
 }
 
 #buttonsOptions {
-  height: 30%;
+  height: 20%;
 }
 
 .options {
@@ -181,21 +181,23 @@ button:hover {
 
 #youScored {
   width: 100%;
-  font-family: var(--title-font);
+  height: 40%;
+  font: var(--title-font);
   color: var(--text-color);
-  font-size: 3rem;
+  font-size: 4vw;
   text-shadow: -2px 0 #023047, 0 1px #023047, 1px 0 #023047, 0 -1px #023047;
 }
 
 span {
   color: var(--accent2);
   font-family: var(--numbers-font);
-  font-size: 4rem;
+  font-size: 5vw;
   text-shadow: -2px 0 #023047, 0 2px #023047, 2px 0 #023047, 0 -2px #023047;
 }
 
 .addScoreUsername {
-  margin-top: -11rem;
+  height: 30%;
+  margin-top: 2px;
 }
 
 #submitNameButton {
@@ -230,7 +232,8 @@ select:focus {
 #avatarContainer {
   text-align: center;
   width: 100%;
-  margin-top: -150px;
+  height: 20%;
+  margin-bottom: 0px;
 }
 
 #avatarImg {
@@ -242,9 +245,15 @@ select:focus {
 
 /* leaderboard table */
 
+.leaderboardTable {
+  height: 60vh;
+  overflow: scroll;
+}
+
 .heading {
+  width: 100%;
   color: var(--text-color);
-  font-size: 3em;
+  font-size: 3vw;
   font-family: var(--heading-font);
   letter-spacing: 1px;
   margin-bottom: 6px;
@@ -266,7 +275,7 @@ th {
 }
 
 #table-position {
-  width: 50px;
+  width: 10%;
   text-align: center;
 }
 
@@ -275,17 +284,17 @@ th {
   text-align: center;
 }
 
+#results-avatar {
+  width: 2.5vw;
+}
+
 #table-name {
-  width: 130px;
+  width: 140px;
 }
 
 #table-score {
-  width: 80px;
+  width: 100px;
   text-align: center;
-}
-
-#results-avatar {
-  width: 28px;
 }
 
 #tryAgainButton {

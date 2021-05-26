@@ -28,7 +28,6 @@ async function updateResults() {
 }
 
 function showLeaderboard(results) {
-  leaderboardTable.innerHTML = `<h2 class="heading">Leaderboard</h2>`;
   for (let i = 0; i < 10; i++) {
     leaderboardTable.innerHTML += `
         <table>
@@ -43,6 +42,7 @@ function showLeaderboard(results) {
         <td id="table-score">${results[i].score}</td>
         </tr>
         </table>
+        </div>
         `;
   }
 }

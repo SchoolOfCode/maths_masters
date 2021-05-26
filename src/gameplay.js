@@ -136,7 +136,7 @@ function startGameFunction() {
 
   //30 second timer
   currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
-  let timeLeft = 200;
+  let timeLeft = 1;
   let timerElem = document.getElementById("timer");
   let timer = setInterval(countdown, 1000);
   function countdown() {
