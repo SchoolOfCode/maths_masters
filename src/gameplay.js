@@ -1,3 +1,12 @@
+let randomNumberForTrivia = "";
+randomNumberForTrivia = Math.floor(Math.random() * 100) + 1;
+async function getTriviaFact() {
+  let response = await fetch(
+    `http://numbersapi.com/${randomNumberForTrivia}/trivia`
+  );
+  let data = await response.text();
+}
+
 function startGameFunction() {
   startGame.style.display = "none";
   gameContainer.style.display = "inherit";
