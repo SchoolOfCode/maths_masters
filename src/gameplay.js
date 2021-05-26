@@ -113,14 +113,14 @@ function startGameFunction() {
         if (options[i].innerHTML == answer) {
           playerScore += 25;
           currentScoreElem.innerHTML = `Your Score: ${playerScore}`;
-          feedbackElem.innerHTML = "Correct!";
+          feedbackElem.innerHTML = `<p class="right">Correct!</p>`;
           setTimeout(function () {
             document.getElementById("feedback").innerHTML = "&nbsp";
           }, 1500);
           console.log(playerScore);
           runGame();
         } else {
-          feedbackElem.innerHTML = "Better luck next time!";
+          feedbackElem.innerHTML = `<p class="wrong">Better luck next time!</p>`;
           setTimeout(function () {
             document.getElementById("feedback").innerHTML = "&nbsp";
           }, 1500);

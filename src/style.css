@@ -149,11 +149,13 @@ button {
 }
 
 .right {
-  background: greenyellow;
+  background: rgb(171, 255, 46, 0.8);
+  color: var(--accent);
 }
 
 .wrong {
-  background: tomato;
+  background: rgb(255, 99, 71, 0.8);
+  color: var(--text-color);
 }
 
 #gameplay {
