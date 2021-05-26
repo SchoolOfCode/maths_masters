@@ -86,14 +86,19 @@ button {
   margin: 54px 0;
 }
 
-#instructions {
-  display: flex;
+.instructions {
   width: 100%;
-  font-family: var(--title-font);
+}
+
+#instructionsButton {
+  background-color: rgb(2, 48, 71, 0.5);
+}
+
+div>#instructions {
+  font-family: var(--text-font);
   color: var(--text-color);
-  text-shadow: -4px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
-  font-size: 2em;
-  letter-spacing: 3px;
+  font-size: 1em;
+  letter-spacing: 1px;
   margin: 5px;
 }
 

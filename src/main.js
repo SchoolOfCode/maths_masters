@@ -17,3 +17,10 @@ function gameOverFunction() {
   gameOver.style.display = "inherit";
   youScored.innerHTML = `<p>You scored <br><span>${playerScore}</span> points!</p>`;
 }
+
+function showInstructions() {
+  document.getElementById("instructionsButton").style.display = "none";
+  document.getElementById("instructions").innerHTML = `
+  You have 30 seconds to correctly answer as many questions as you can!
+  <br />Good Luck!`;
+}
