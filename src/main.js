@@ -3,6 +3,8 @@ const gameContainer = document.querySelector(".gameContainer");
 const gameOver = document.querySelector(".gameOver");
 const displayScore = document.querySelector(".displayScore");
 const youScored = document.querySelector("#youScored");
+const instructionsButton = document.querySelector("#instructionsButton");
+const instructions = document.querySelector("#instructions")
 
 function hidePages() {
   gameContainer.style.display = "none";
@@ -19,8 +21,9 @@ function gameOverFunction() {
 }
 
 function showInstructions() {
-  document.getElementById("instructionsButton").style.display = "none";
-  document.getElementById("instructions").innerHTML = `
+  instructionsButton.style.display = "none";
+  instructions.classList.add("inst");
+  instructions.innerHTML = `
   You have 30 seconds to correctly answer as many questions as you can!
   <br />Good Luck!`;
 }

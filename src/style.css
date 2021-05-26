@@ -5,17 +5,15 @@
 
 :root {
   --background-color: whitesmoke;
-  --box-background: #fae4ab;
-  --heading: #023047;
+  --box-background: ##023047;
   --accent: #023047;
   --accent2: #fb8500;
   --accent3: #219ebc;
   --accent4: #8ecae6;
   --text-color: whitesmoke;
-  --borders: #023047;
 
-  --title-font: "Bangers";
-  --text-font: "Poppins";
+  --title-font: 8vw "Bangers";
+  --text-font: 13px "Poppins";
   --numbers-font: "Russo One";
   --heading-font: "Righteous";
 }
@@ -26,10 +24,9 @@
 
 body {
   background-color: var(--background-color);
-  font-family: var(--text-font);
+  font: var(--text-font);
   font-weight: bold;
-  font-size: 13px;
-  margin: 5% auto;
+  margin: 3% auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,9 +38,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  width: 85vh;
+  width: 50vw;
   height: 85vh;
-  background-color: var(--borders);
+  background-color: var(--accent);
   border: transparent outset 10px;
   border-radius: 10px;
   transition: border 300ms ease-in;
@@ -55,8 +52,9 @@ body {
 }
 
 button {
-  width: 100px;
-  height: 30px;
+  font: var(--text-font);
+  width: 15vw;
+  height: 6vh;
   background-color: var(--accent3);
   color: var(--text-color);
   border: 0;
@@ -72,16 +70,15 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   background-color: var(--box-background);
 }
 
 .title {
   width: 100%;
-  font-family: var(--title-font);
+  font: var(--title-font);
   color: var(--text-color);
   text-shadow: -4px 0 #023047, 0 2px #023047, 1px 0 #023047, 0 -1px #023047;
-  font-size: 7em;
   letter-spacing: 5px;
   margin: 54px 0;
 }
@@ -90,11 +87,16 @@ button {
   width: 100%;
 }
 
+.inst {
+  background: rgb(2, 48, 71, 0.5);
+  padding: 10px;
+}
+
 #instructionsButton {
   background-color: rgb(2, 48, 71, 0.5);
 }
 
-div>#instructions {
+#instructions {
   font-family: var(--text-font);
   color: var(--text-color);
   font-size: 1em;
@@ -113,6 +115,7 @@ div>#instructions {
   background-color: white;
   padding: 6px;
   font-weight: bolder;
+  height: 10%;
 }
 
 #feedback {
@@ -120,11 +123,23 @@ div>#instructions {
   font-weight: bolder;
 }
 
+.right {
+  background: greenyellow;
+}
+
+.wrong {
+  background: tomato;
+}
+
 #gameplay {
   width: 100%;
+  height: 40%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+}
+
+#buttonsOptions {
+  height: 30%;
 }
 
 .options {
@@ -239,12 +254,12 @@ select:focus {
 table {
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--borders);
+  border: 1px solid var(--accent);
 }
 
 td,
 th {
-  border-bottom: 1px solid var(--borders);
+  border-bottom: 1px solid var(--accent);
   text-align: left;
   padding: 5px;
   text-transform: capitalize;

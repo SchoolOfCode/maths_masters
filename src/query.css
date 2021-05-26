@@ -1,7 +1,16 @@
+:root {
+  --title-font: 15vw "Bangers";
+}
+
 .box {
   width: 100%;
   height: 100vh;
   border: none;
+}
+
+button {
+  width: 20vw;
+  height: 6vh;
 }
 
 body {
