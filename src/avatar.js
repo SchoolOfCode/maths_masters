@@ -2,6 +2,13 @@ const seeds = document.querySelector("#seeds");
 const avatarContainer = document.querySelector("#avatarContainer");
 const inputUsername = document.querySelector("#addUsername");
 
+function inputValue() {
+  if ((inputUsername.value.length == 0)) {
+    inputUsername.value = "Anonymous";
+  }
+}
+inputValue();
+
 function getAvatar() {
   function getDropdownOption(seeds) {
     var options;
