@@ -4,7 +4,7 @@ const numbersapi = document.querySelector(".numbersapi");
 async function getTriviaFact() {
     randomNumberForTrivia = Math.floor(Math.random() * 100) + 1;
   let response = await fetch(
-    `https://numbersapi.com/${randomNumberForTrivia}/trivia`
+    `http://numbersapi.com/${randomNumberForTrivia}/trivia`
   );
   let data = await response.text();
     console.log(data);
