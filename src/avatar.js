@@ -2,14 +2,6 @@ const seeds = document.querySelector("#seeds");
 const avatarContainer = document.querySelector("#avatarContainer");
 const inputUsername = document.querySelector("#addUsername");
 
-function inputValue() {
-  if ((inputUsername.value.length == 0)) {
-    inputUsername.value = "Anonymous";
-    options.value = "micah"
-  }
-}
-inputValue();
-
 function getAvatar() {
   function getDropdownOption(seeds) {
     var options;
@@ -25,6 +17,14 @@ function getAvatar() {
   let options = getDropdownOption(seeds);
   displayAvatar(options);
 }
+
+function inputValue() {
+  if ((inputUsername.value.length == 0)) {
+    inputUsername.value = "Anonymous";
+    options.value = "micah"
+  }
+}
+inputValue();
 
 function displayAvatar(options) {
   const avatarImage = `https://avatars.dicebear.com/api/${options.value}/${inputUsername.value}.svg`;
