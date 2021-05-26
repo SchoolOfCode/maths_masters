@@ -5,6 +5,7 @@ const inputUsername = document.querySelector("#addUsername");
 function inputValue() {
   if ((inputUsername.value.length == 0)) {
     inputUsername.value = "Anonymous";
+    options.value = "micah"
   }
 }
 inputValue();
