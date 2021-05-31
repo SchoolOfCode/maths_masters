@@ -1,0 +1,45 @@
+:root {
+  --title-font: 15vw "Bangers";
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  border: none;
+}
+
+button {
+  width: 20vw;
+  height: 6vh;
+  background-color: #219ebc;
+}
+
+body {
+  margin: 0;
+  background-color: #023047;
+}
+
+.addScoreUsername {
+  margin-top: -14rem;
+}
+
+#avatarImg {
+  width: 100px;
+  border: 5px solid #023047;
+}
+
+#youScored {
+  font-size: 9vw;
+}
+
+span {
+  font-size: 10vw;
+}
+
+.heading {
+  font-size: 9vw;
+}
+
+#results-avatar {
+  width: 6vw;
+}
